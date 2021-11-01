@@ -76,7 +76,6 @@ int main()
     insertAtEnd(2);
     insertAtBeginning(6);
     print();
-    
     Node *mid = findMidPoint();
     cout << "mid point : " << mid->data << endl;
 }
