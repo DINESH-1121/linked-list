@@ -1,17 +1,17 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 struct Node
 {
     int data;
     Node *next;
-}*head=NULL;
+} *head = NULL;
 
 void insertAtBeginning(int val)
 {
     Node *newNode = new Node();
     newNode->data = val;
-    if(head == NULL)
+    if (head == NULL)
     {
         newNode->next = NULL;
         head = newNode;
@@ -29,14 +29,14 @@ void insertAtEnd(int val)
     newNode->data = val;
     newNode->next = NULL;
 
-    if(head == NULL)
+    if (head == NULL)
     {
         head = newNode;
     }
     else
     {
         Node *cur = head;
-        while(cur->next != NULL)
+        while (cur->next != NULL)
         {
             cur = cur->next;
         }
@@ -48,7 +48,7 @@ Node *findMidPoint()
 {
     Node *slow = head, *fast = head;
 
-    while (fast != NULL || fast->next != NULL)
+    while (fast != NULL && fast->next != NULL)
     {
         slow = slow->next;
         fast = fast->next->next;
@@ -59,13 +59,12 @@ Node *findMidPoint()
 void print()
 {
     Node *cur = head;
-    while(cur != NULL)
+    while (cur != NULL)
     {
-        printf("%d ",cur->data);
+        printf("%d ", cur->data);
         cur = cur->next;
     }
     printf("\n");
-
 }
 
 int main()
