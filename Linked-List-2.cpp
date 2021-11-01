@@ -44,7 +44,17 @@ void insertAtEnd(int val)
     }
 }
 
-void dele
+Node *findMidPoint()
+{
+    Node *slow = head, *fast = head;
+
+    while (fast != NULL || fast->next != NULL)
+    {
+        slow = slow->next;
+        fast = fast->next->next;
+    }
+    return slow;
+}
 
 void print()
 {
@@ -66,4 +76,7 @@ int main()
     insertAtEnd(2);
     insertAtBeginning(6);
     print();
+    
+    Node *mid = findMidPoint();
+    cout << "mid point : " << mid->data << endl;
 }
