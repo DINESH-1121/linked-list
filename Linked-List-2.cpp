@@ -83,7 +83,7 @@ Node *findLastKthItem(int k)
 
 Node *intersection()
 {
-    Node *p = h1,*q = h2;
+    Node *p = head,*q = head;
     int n1 = 0,n2 = 0;
 
     while(p->next != NULL)
